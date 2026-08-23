@@ -1,0 +1,495 @@
+:root {
+  font-family: Inter, Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg: #08111f;
+  --card: #101b2d;
+  --surface: rgba(14, 25, 42, .78);
+  --surface-strong: rgba(18, 32, 52, .92);
+  --muted: #a7b3c6;
+  --text: #f7fbff;
+  --line: rgba(167, 179, 198, .18);
+  --violet: #7c3aed;
+  --cyan: #2dd4bf;
+  --blue: #38bdf8;
+  --gold: #f8c77e;
+  --rose: #fb7185;
+}
+
+body {
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(45, 212, 191, .08), transparent 34%),
+    linear-gradient(215deg, rgba(248, 199, 126, .08), transparent 36%),
+    #08111f;
+}
+
+body,
+a,
+button {
+  cursor: auto;
+}
+
+.custom-cursor,
+.blob,
+.particle {
+  display: none;
+}
+
+.ambient {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+    linear-gradient(180deg, #08111f 0%, #0b1424 42%, #0d111d 100%);
+  background-size: 76px 76px, 76px 76px, auto;
+}
+
+.noise {
+  opacity: .045;
+}
+
+.grid-mask {
+  background-image: linear-gradient(90deg, rgba(45, 212, 191, .055) 1px, transparent 1px);
+  background-size: 100% 100%;
+  mask-image: linear-gradient(to bottom, black, transparent 74%);
+}
+
+header {
+  top: 18px;
+  width: min(1180px, calc(100% - 44px));
+  height: 66px;
+  border-radius: 14px;
+  background: rgba(8, 17, 31, .82);
+  border-color: rgba(255, 255, 255, .14);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .28);
+}
+
+.brand {
+  letter-spacing: -.5px;
+}
+
+.brand span,
+.loader-mark span {
+  color: var(--gold);
+}
+
+header nav a {
+  color: #98a6bb;
+  font-size: 12px;
+}
+
+header nav a.active:after {
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(248, 199, 126, .9);
+}
+
+.availability {
+  border-radius: 9px;
+  color: #eafaf7;
+  background: rgba(45, 212, 191, .09);
+  border-color: rgba(45, 212, 191, .24);
+}
+
+.hero {
+  width: min(1180px, calc(100% - 48px));
+  grid-template-columns: 1.08fr .92fr;
+  gap: 46px;
+  padding-top: 142px;
+}
+
+.status-pill {
+  border-radius: 9px;
+  background: rgba(45, 212, 191, .08);
+  border-color: rgba(45, 212, 191, .24);
+  color: #d5fbf4;
+}
+
+.status-pill span {
+  color: var(--gold);
+}
+
+.hero-kicker,
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 1.4px;
+}
+
+.hero h1 {
+  max-width: 780px;
+  font-size: clamp(58px, 8vw, 112px);
+  letter-spacing: -4px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+  text-shadow: 0 0 30px rgba(248, 199, 126, .32);
+}
+
+.role-line {
+  min-height: 50px;
+  height: auto;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  color: #dbe6f5;
+}
+
+.role-line > span {
+  color: #8ea0b8;
+}
+
+.role-line strong {
+  position: relative;
+  margin-left: 0;
+  display: inline-block;
+  background: linear-gradient(90deg, #2dd4bf, #f8c77e);
+  background-clip: text;
+}
+
+.hero-summary {
+  color: #bfcbda;
+  font-size: 17px;
+  max-width: 650px;
+}
+
+.button {
+  height: 50px;
+  border-radius: 9px;
+  font-size: 12px;
+}
+
+.button-primary,
+.contact-cta {
+  color: #06111c;
+  background: linear-gradient(135deg, #f8c77e, #2dd4bf);
+  box-shadow: 0 18px 40px rgba(45, 212, 191, .18);
+}
+
+.button-secondary,
+.button-ghost,
+.project-secondary {
+  border-color: rgba(255, 255, 255, .16);
+  background: rgba(255, 255, 255, .055);
+}
+
+.hero-socials {
+  color: #8fa0b6;
+}
+
+.hero-socials a,
+.footer-actions > a {
+  border-radius: 9px;
+}
+
+.hero-visual {
+  height: 560px;
+}
+
+.visual-orbit {
+  border-radius: 18px;
+  transform: rotate(-8deg);
+  border-color: rgba(248, 199, 126, .13);
+}
+
+.orbit-one {
+  width: 430px;
+  height: 430px;
+}
+
+.orbit-two {
+  width: 330px;
+  height: 330px;
+  border-color: rgba(45, 212, 191, .2);
+}
+
+.core-card,
+.mock-window,
+.contact-list,
+.ai-shell,
+.glass-card,
+.project-card,
+.command-palette {
+  background: linear-gradient(145deg, rgba(18, 32, 52, .92), rgba(8, 17, 31, .88));
+  border-color: rgba(255, 255, 255, .14);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .22);
+}
+
+.core-card {
+  width: 360px;
+  border-radius: 16px;
+}
+
+.core-top,
+.mock-bar {
+  background: rgba(255, 255, 255, .04);
+}
+
+.code-lines {
+  color: #9caeca;
+}
+
+.code-lines em {
+  color: var(--gold);
+}
+
+.code-lines b {
+  color: var(--cyan);
+}
+
+.tech-float {
+  border-radius: 8px;
+  background: rgba(8, 17, 31, .86);
+  color: #dbe6f5;
+  border-color: rgba(255, 255, 255, .16);
+}
+
+.scroll-cue {
+  color: #8da0b8;
+}
+
+.section-wrap {
+  width: min(1160px, calc(100% - 48px));
+  padding: 112px 0;
+}
+
+.section-header h2,
+.ai-copy h2,
+.contact-intro h2 {
+  letter-spacing: -2.3px;
+}
+
+.section-header p,
+.ai-copy > p,
+.contact-intro > p {
+  color: #aab7c9;
+}
+
+.glass-card,
+.project-card,
+.certificate-card,
+.contact-list,
+.ai-shell {
+  border-radius: 16px;
+}
+
+.card-icon,
+.skill-icon,
+.contact-list > a > i {
+  border-radius: 10px;
+  background: rgba(45, 212, 191, .1);
+  color: var(--cyan);
+}
+
+.education-card:before,
+.skill-card:after {
+  opacity: 0;
+}
+
+.education-card h3,
+.foundation-heading h3,
+.experience-top h3,
+.skill-card h3,
+.certificate-card h3 {
+  color: #f7fbff;
+}
+
+.education-card > p,
+.experience-body > p,
+.skill-card > p,
+.project-copy > p {
+  color: #a7b3c6;
+}
+
+.foundation-list > div,
+.contact-list > a {
+  border-color: rgba(167, 179, 198, .14);
+}
+
+.foundation-list > div:hover,
+.contact-list > a:hover {
+  background: rgba(45, 212, 191, .055);
+}
+
+.timeline-rail:before {
+  background: rgba(167, 179, 198, .18);
+}
+
+.timeline-rail i {
+  background: linear-gradient(var(--gold), var(--cyan));
+}
+
+.timeline-rail span {
+  background: var(--gold);
+  box-shadow: 0 0 0 5px #102033, 0 0 20px rgba(248, 199, 126, .78);
+}
+
+.company-mark {
+  border-radius: 12px;
+  color: #07111d;
+  background: linear-gradient(135deg, #f8c77e, #2dd4bf);
+}
+
+.company-mark span {
+  color: #07111d;
+}
+
+.experience-tags span,
+.project-tech span,
+.skill-chips span {
+  border-color: rgba(255, 255, 255, .14);
+  background: rgba(255, 255, 255, .04);
+  color: #b7c4d7;
+}
+
+.skills-grid {
+  gap: 16px;
+}
+
+.skill-card {
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.skill-meter > i {
+  background: rgba(167, 179, 198, .16);
+}
+
+.skill-meter b {
+  background: linear-gradient(90deg, var(--gold), var(--cyan));
+}
+
+.toolbelt {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .035);
+}
+
+.projects-list {
+  gap: 20px;
+}
+
+.project-card {
+  border-radius: 18px;
+  padding: 36px;
+}
+
+.project-featured {
+  padding: 48px;
+}
+
+.project-number span,
+.eyebrow span,
+.visual-stamp svg,
+.verified,
+.location > svg {
+  color: var(--gold);
+}
+
+.project-number i,
+.eyebrow:after {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.project-copy h3 {
+  letter-spacing: -2.2px;
+}
+
+.project-copy h3 span {
+  color: var(--gold);
+}
+
+.project-primary {
+  color: #06111c;
+  background: #f7fbff;
+}
+
+.project-features i,
+.experience-body i {
+  background: rgba(45, 212, 191, .12);
+  color: var(--cyan);
+}
+
+.certificate-code svg,
+.ai-copy h2 em,
+.contact-intro h2 em {
+  color: var(--gold);
+  background: linear-gradient(90deg, #f8c77e, #2dd4bf);
+  background-clip: text;
+}
+
+.ai-shell {
+  background:
+    linear-gradient(145deg, rgba(18, 32, 52, .94), rgba(8, 17, 31, .94));
+}
+
+.ai-core {
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(248, 199, 126, .16), rgba(45, 212, 191, .1));
+  border-color: rgba(248, 199, 126, .32);
+}
+
+.data-chip {
+  border-radius: 8px;
+}
+
+.stats-section {
+  border-color: rgba(167, 179, 198, .16);
+}
+
+.stats-section strong {
+  color: #f8c77e;
+}
+
+.contact-cta {
+  border-radius: 10px;
+}
+
+.footer-actions .to-top {
+  background: var(--text);
+  color: #08111f;
+}
+
+@media (max-width: 740px) {
+  header {
+    width: calc(100% - 24px);
+    border-radius: 12px;
+  }
+
+  .hero {
+    width: calc(100% - 32px);
+    padding-top: 124px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+    letter-spacing: -2.5px;
+  }
+
+  .role-line {
+    min-height: 72px;
+  }
+
+  .role-line strong {
+    margin-left: 0;
+  }
+
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .core-card {
+    width: min(100%, 300px);
+  }
+
+  .section-wrap,
+  .projects-section,
+  .ai-section {
+    width: min(100% - 32px, 620px);
+    padding: 82px 0;
+  }
+
+  .project-card,
+  .project-featured {
+    padding: 24px;
+  }
+
+  .stats-section {
+    padding: 30px 0;
+  }
+}
